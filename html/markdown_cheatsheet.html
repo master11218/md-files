@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='../stylesheets/gh-like.css' type='text/css' media='screen'>
+  </head>
+  <body>
+    <h2 class='all_docs_link'><a href='/'><< All Documents</a></h2>
+    <img src='../images/bolstr_logo.png' style='float:right;' />
+    <div style='clear:both;'></div>
+    <h1 id="header-1">Header 1</h1>
+<p>## Header 2 ##<br />
+### Header 3 ###             (Hashes on right are optional)<br />
+#### Header 4 ####<br />
+##### Header 5 #####  </p>
+
+<h2 id="id-goes-here">Markdown plus h2 with a custom ID ##</h2>
+<p><a href="#id-goes-here">Link back to H2</a></p>
+
+<p>This is a paragraph, which is text surrounded by whitespace. Paragraphs can be on one 
+line (or many), and can drone on for hours.  </p>
+
+<p>Here is a Markdown link to <a href="http://warpedvisions.org">Warped</a>, and a literal . 
+Now some SimpleLinks, like one to [google] (automagically links to are-you-
+feeling-lucky), a [wiki: test] link to a Wikipedia page, and a link to 
+[foldoc: CPU]s at foldoc.  </p>
+
+<p>Now some inline markup like <em>italics</em>,  <strong>bold</strong>, and <code>code()</code>. Note that underscores in 
+words are ignored in Markdown Extra.</p>
+
+<p><img src="/images/photo.jpeg" alt="picture alt" title="Title is optional" />     </p>
+
+<blockquote>
+  <p>Blockquotes are like quoted text in email replies
+&gt; And, they can be nested</p>
+</blockquote>
+
+<ul>
+  <li>Bullet lists are easy too</li>
+  <li>Another one</li>
+  <li>Another one</li>
+</ul>
+
+<ol>
+  <li>A numbered list</li>
+  <li>Which is numbered</li>
+  <li>With periods and a space</li>
+</ol>
+
+<p>And now some code:</p>
+
+<pre><code>// Code is just text indented a bit
+which(is_easy) to_remember();
+</code></pre>
+
+<pre><code>
+// Markdown extra adds un-indented code blocks too
+
+if (this_is_more_code == true &amp;&amp; !indented) {
+    // tild wrapped code blocks, also not indented
+}
+
+</code></pre>
+
+<p>Text with<br />
+two trailing spaces<br />
+(on the right)<br />
+can be used<br />
+for things like poems  </p>
+
+<h3 id="horizontal-rules">Horizontal rules</h3>
+
+<hr />
+<hr />
+<hr />
+
+<div class="custom-class">
+  <p>This is a div wrapping some Markdown plus.  Without the DIV attribute, it ignores the 
+block. </p>
+</div>
+
+<h2 id="markdown-plus-tables">Markdown plus tables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Header</th>
+      <th style="text-align: right">Right</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td style="text-align: right">$10</td>
+    </tr>
+    <tr>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td style="text-align: right">$20</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Outer pipes on tables are optional</li>
+  <li>Colon used for alignment (right versus left)</li>
+</ul>
+
+<h2 id="markdown-plus-definition-lists">Markdown plus definition lists</h2>
+
+<dl>
+  <dt>Bottled water</dt>
+  <dd>$ 1.25</dd>
+  <dd>$ 1.55 (Large)</dd>
+  <dt>Milk</dt>
+  <dt>Pop</dt>
+  <dd>$ 1.75</dd>
+</dl>
+
+<ul>
+  <li>Multiple definitions and terms are possible</li>
+  <li>Definitions can include multiple paragraphs too</li>
+</ul>
+
+<h1 id="syntax-highlight">Syntax Highlight</h1>
+<p><code>{:lang='ruby'}</code> will format the code with syntax highlighting!</p>
+
+  </body>
+</html>

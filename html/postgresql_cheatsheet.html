@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='../stylesheets/gh-like.css' type='text/css' media='screen'>
+  </head>
+  <body>
+    <h2 class='all_docs_link'><a href='/'><< All Documents</a></h2>
+    <img src='../images/bolstr_logo.png' style='float:right;' />
+    <div style='clear:both;'></div>
+    <h1 id="postgresql-cheat-sheet">PostgreSQL Cheat Sheet</h1>
+
+<h2 id="login">LOGIN</h2>
+<p>At the command line:</p>
+
+<pre><code>psql template1
+</code></pre>
+
+<h2 id="show-commands">SHOW COMMANDS</h2>
+<p><strong>mysql:</strong> <code>SHOW TABLES</code><br />
+<strong>postgresql:</strong> <code>\d</code><br />
+<strong>postgresql:</strong> <code>SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';</code>  </p>
+
+<p><strong>mysql:</strong> <code>SHOW DATABASES</code><br />
+<strong>postgresql:</strong> <code>\l</code><br />
+<strong>postgresql:</strong> <code>SELECT datname FROM pg_database;</code>  </p>
+
+<p><strong>mysql:</strong> <code>SHOW COLUMNS</code><br />
+<strong>postgresql:</strong> <code>\d table</code><br />
+<strong>postgresql:</strong> <code>SELECT column_name FROM information_schema.columns WHERE table_name ='table';</code>  </p>
+
+<h2 id="create-database">CREATE DATABASE</h2>
+<p>If logged into the interactive psql prompt:</p>
+
+<pre><code>CREATE DATABASE name;
+</code></pre>
+
+<p>At the command line:</p>
+
+<pre><code>createdb dbname
+</code></pre>
+
+<p>Sometimes you want to create a database for someone else. That role should become the owner of the new database, so he can configure and manage it himself. To achieve that, use one of the following commands:</p>
+
+<pre><code># Logged in
+CREATE DATABASE dbname OWNER rolename;
+
+# Command Line
+createdb -O rolename dbname
+</code></pre>
+
+<p>More info: <a href="http://www.postgresql.org/docs/8.1/static/manage-ag-createdb.html">http://www.postgresql.org/docs/8.1/static/manage-ag-createdb.html</a></p>
+
+<h2 id="backup-and-restore">BACKUP AND RESTORE</h2>
+
+<p>From: <a href="http://www.thegeekstuff.com/2009/01/how-to-backup-and-restore-postgres-database-using-pg_dump-and-psql/">The Geek Stuff</a></p>
+
+<p>Backup:</p>
+
+<pre><code>pg_dump -U {user-name} {source_db} -f {dumpfilename.sql}
+</code></pre>
+
+<p>Restore: </p>
+
+<pre><code>psql -U {user-name} -d {desintation_db}-f {dumpfilename.sql}
+</code></pre>
+
+  </body>
+</html>

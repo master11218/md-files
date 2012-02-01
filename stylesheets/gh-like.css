@@ -232,6 +232,8 @@ sub {
 
 .toc_links{
   list-style: circle url('../images/colon.png');
+  margin: 12px 0 0 12px;
+  padding: 0;
 }
 
 .toc_links li:first-child{

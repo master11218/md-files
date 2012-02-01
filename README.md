@@ -10,7 +10,7 @@ Setup RVM:
     
 Clone the repo:
 
-    git clone git@github.com:BOLSTR/Docs.git
+    git clone https://github.com/j2fly/md-files.git
     
 CD to the root of the repo to trigger the .rvmrc. You should have the following specified after accepting the .rvmrc:
 
